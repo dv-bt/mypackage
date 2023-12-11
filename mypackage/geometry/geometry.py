@@ -1,4 +1,4 @@
-from ..utils import distance
+import numpy as np
 
 
 class Point:
@@ -14,3 +14,7 @@ class Line:
 
     def length(self) -> float:
         return distance(self.p1, self.p2)
+
+
+def distance(p1: "Point", p2: "Point") -> float:
+    return np.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)
